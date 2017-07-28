@@ -17,7 +17,7 @@
 |
 */
 
-$config['base_url']	= 'http://localhost/projects/radiox/';
+$config['base_url']	= 'http://localhost/radiox/';
 //$config['base_url']	= 'http://synergistics.ae/radiox/';
 /*
 |--------------------------------------------------------------------------

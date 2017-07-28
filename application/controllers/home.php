@@ -59,6 +59,31 @@ class Home extends CI_Controller
         $result['tracks'] = $this->Home_model->getRecords('tracks', '', '', 'sort ASC');
         $this->load->view('tracks', $result);
     }
+	
+	public function about_us(){
+        $this->load->view('about_us');
+    }
+	public function program_guide(){
+        $this->load->view('program_guide');
+    }
+	public function support(){
+        $this->load->view('support');
+    }
+	public function faq(){
+        $this->load->view('faq');
+    }
+	public function copyright(){
+        $this->load->view('copyright');
+    }
+	public function top_10(){
+        $this->load->view('top_10');
+    }
+	public function rjs(){
+        $this->load->view('rjs');
+    }
+	public function competition(){
+        $this->load->view('competition');
+    }
     
     private function timezone(){
                 

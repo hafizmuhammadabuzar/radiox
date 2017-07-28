@@ -2474,6 +2474,10 @@ a {
   width: 100%; }
 
 /* Scss Document */
+body.padding {
+	padding:15px;
+}
+
 #wrapper {
   overflow: hidden; }
 
@@ -2504,15 +2508,15 @@ header {
     .SocialLinks a:hover {
       background-position: left bottom; }
   .SocialLinks .Facebook {
-    background: url(../images/icon-facebook.png) no-repeat left top;
+    background: url(images/icon-facebook.png) no-repeat left top;
     width: 11px;
     height: 24px; }
   .SocialLinks .Instagram {
-    background: url(../images/icon-insta.png) no-repeat left top;
+    background: url(images/icon-insta.png) no-repeat left top;
     width: 24px;
     height: 24px; }
   .SocialLinks .Twitter {
-    background: url(../images/icon-twitter.png) no-repeat left top;
+    background: url(images/icon-twitter.png) no-repeat left top;
     width: 25px;
     height: 19px; }
 
@@ -2557,7 +2561,7 @@ nav ul {
         width: 100%; }
 
 #Banner {
-  background-image: url("../images/bg-banner.jpg");
+  background-image: url("images/bg-banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -2676,7 +2680,7 @@ nav ul {
     font-size: 14px; }
 
 .IconScroll {
-  background-image: url("../images/icon-down.png");
+  background-image: url("images/icon-down.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #fff;
@@ -2703,7 +2707,7 @@ nav ul {
     background-position: center 60%; } }
 
 .IconScroll.up {
-  background-image: url("../images/icon-up.png");
+  background-image: url("images/icon-up.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #fff;
@@ -2727,7 +2731,7 @@ nav ul {
   overflow: hidden; }
 
 #Screenshots {
-  background: url(../images/bg-pattren.png) repeat left top; }
+  background: url(images/bg-pattren.png) repeat left top; }
   #Screenshots .container {
     max-width: 900px; }
 
@@ -2747,7 +2751,7 @@ nav ul {
   padding-left: 60px; }
 
 #Download {
-  background: url(../images/bg-download-section.jpg) repeat-x left bottom #1f5ea3;
+  background: url(images/bg-download-section.jpg) repeat-x left bottom #1f5ea3;
   position: relative;
   color: #fff;
   padding: 60px 0; }

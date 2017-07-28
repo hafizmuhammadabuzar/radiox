@@ -42,7 +42,14 @@ $route['schedule'] = "home/schedule";
 $route['getSchedule'] = "home/getSchedule";
 $route['top20'] = "home/tracks";
 $route['message_us'] = "api/sendMessage";
-
+$route['about_us'] = "home/about_us";
+$route['program_guide'] = "home/program_guide";
+$route['support'] = "home/support";
+$route['faq'] = "home/faq";
+$route['copyright'] = "home/copyright";
+$route['top_10'] = "home/top_10";
+$route['rjs'] = "home/rjs";
+$route['competition'] = "home/competition";
 
 // API
 $route['api/saveToken'] = "api/SaveIosToken";

@@ -1,5 +1,9 @@
 /* Scss Document */
 
+body.padding {
+	padding:($padding/2);
+}
+
 #wrapper {
     overflow:hidden;
 }
@@ -45,7 +49,7 @@ header {
     }
 
     .Twitter {
-        background:url(../images/icon-twitter.png) no-repeat left top;
+        background:url(images/icon-twitter.png) no-repeat left top;
         width:25px;
         height:19px;
     }
@@ -247,7 +251,7 @@ nav ul {
 }
 
 .IconScroll {
-    @include icon-scroll ("../images/icon-down.png");
+    @include icon-scroll ("images/icon-down.png");
 }
 
 @-webkit-keyframes animatedBackground {
@@ -275,7 +279,7 @@ nav ul {
 }
 
 .IconScroll.up {
-    @include icon-scroll ("../images/icon-up.png");
+    @include icon-scroll ("images/icon-up.png");
     float:right;
 }
 
