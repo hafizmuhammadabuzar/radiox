@@ -38,10 +38,9 @@ class Api extends CI_Controller
 
                 $email->From      = $this->input->post('email');
                 $email->FromName  = $this->input->post('name');
-                $email->Subject   = 'Dubai Visa APP - Message Form ';
+                $email->Subject   = 'RadioX - Message Form';
                 $email->MsgHTML($content);
-//                $email->AddAddress('pk@synergistics.ae');
-                $email->AddAddress('hafizmabuzar@synergistics.pk');
+                $email->AddAddress('pk@synergistics.ae');
                 $email->Send();
                 
                 $this->session->set_userdata('msg', 'Email successfully sent, we will get back to you shortly.');
