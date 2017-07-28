@@ -1,0 +1,38 @@
+/* Scss Document */
+
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+	outline:none;
+	padding:0;
+	margin:0;
+ }
+
+body {
+	font-family:$font-family-light;
+	background-color:$bgwhite;
+	font-size:$font-size;
+	color:$font-color;
+}
+
+h1 {
+	font-family:$heading-family;
+	font-size:$heading-font-size;
+	color:$heading-color;
+	font-weight:$font-weight-nor;
+	margin:0 0 ($margin) 0;
+}
+
+h2 {}
+
+p {
+	line-height:$line-height;
+	margin:0 0 ($margin/2) 0;
+}
+
+a {
+	text-decoration:none;
+}
+
+

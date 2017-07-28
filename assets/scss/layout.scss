@@ -1,0 +1,601 @@
+/* Scss Document */
+
+#wrapper {
+    overflow:hidden;
+}
+
+header {
+    padding-top:($padding/2);
+    @include positioning(absolute);
+}
+
+.Logo {
+    float:left;
+}
+
+.HeaderRight {
+    float:right;
+    padding-top:20px;
+}
+
+.SocialLinks {
+    float:right;
+    font-size:0;
+    a {
+        display:inline-block;
+        margin:0 ($margin/1.5);
+        vertical-align:middle;
+        -webkit-transition: background 0.3s;
+        transition: background 0.3s;
+        &:hover {
+            background-position:left bottom;
+        }
+    }
+
+    .Facebook {
+        background:url(images/icon-facebook.png) no-repeat left top;
+        width:11px;
+        height:24px;
+    }
+
+    .Instagram {
+        background:url(images/icon-insta.png) no-repeat left top;
+        width:24px;
+        height:24px;
+    }
+
+    .Twitter {
+        background:url(../images/icon-twitter.png) no-repeat left top;
+        width:25px;
+        height:19px;
+    }
+}
+
+nav {
+    float:right;
+}
+
+nav ul {
+    @include list-style-none;
+    li {
+        display:inline-block;			
+        padding:0 ($padding/3);
+        &:nth-of-type(1) a:after {
+            background: #1f2a5a;
+        }
+        &:nth-of-type(2) a:after {
+            background: #38b9e7;
+        }
+        &:nth-of-type(3) a:after {
+            background: #fff;
+        }
+        a {
+            font-family:$font-family-reg;
+            font-size:$font-size-menu;
+            text-transform:uppercase;
+            position: relative;
+            color:$text-white;
+            padding:5px;
+            display: block;
+            &:after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 0%;
+                content: '.';
+                color: transparent;
+                height: 3px;
+                transition: all .5s;
+            }
+            &:hover:after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+#Banner {
+    @include full-background-image("images/bg-banner.jpg");
+    padding:($padding*7) 0 ($padding) 0;
+    margin-bottom:($margin);
+    color:$text-white;
+    font-size:($font-size - 2);
+    h1 {
+        font-size:$heading-font-size+5;
+        margin-bottom:$margin/3;
+        color:$text-white;
+    }
+
+    .radioco-playButton-playing:before{
+        font-family: 'FontAwesome', sans-serif;
+        content: "\f04b";
+    }
+
+    .radioco-playButton-paused:before{
+        font-family: 'FontAwesome', sans-serif;
+        content:"\f04c";
+    }
+
+    .radioplayer{
+        padding: 20px;
+        max-width: 500px;
+        margin:$margin 0;
+        width:100%;
+        height: 109px;
+        border-radius:4px;
+        background-position:center center !important;
+        background-repeat:no-repeat !important;
+        background-size: cover !important;
+        overflow: hidden;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        z-index:2;
+        position:relative;
+    }
+
+    .radioco-playButton{
+        box-shadow: #111 1px 1px 10px;
+        color: #fff;
+        position: relative;
+        top: 30px;
+        text-align: left;
+        margin-left:10%;
+        position: relative;
+        z-index: 2;
+        font-size:50px;
+    }
+
+    .radioco-playButton:active{
+        color:#ccc;
+    }
+
+    .radioco-playButton-playing{
+        font-family: "controls";
+        position: absolute;
+        left:-10px;
+        text-size:150%;
+        text-shadow:#333 0px 0px 15px;
+    }
+
+
+    .radioco-playButton-paused{
+        font-family: "controls";
+        position: absolute;
+        text-size:150%;
+        text-shadow:#333 0px 0px 15px;
+        left:-10px;
+    }	
+
+    .radioco-image{
+        vertical-align: middle;
+        margin-left: -20px;
+        margin-top: -20px;
+        position: relative;
+        z-index: 1;
+        width:150px;
+        height: 150px;
+    }
+
+    .radioco-bg{
+        margin-top: -99px;
+        margin-left: -29px;
+        -webkit-filter: blur(30px) brightness(0.6);
+        overflow: hidden;
+        width: 500px;
+        position: relative;
+        left: 70px;
+        top: -180px;
+    }
+
+    .radioco-information{
+        display: block;
+        position: relative;
+        width: 340px;
+        color:#fff;
+        z-index: 1;
+        float: right;
+        top:13px;
+    }
+
+    .radioco-information span{
+        display:block;
+    }
+
+    .radioco-information input[type="range"]{
+        background: rgba(255,255,255,0.3);
+        cursor:pointer;
+        width: 100px;
+        display: block;
+        height: 4px;
+        -webkit-appearance: none;
+        -webkit-border-radius: 8px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        cursor: -webkit-grab;
+        outline: 0;
+    }
+
+    .radioco-information input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        width:15px;
+        height:15px;
+        border-radius: 10px;
+        background: #ffffff;
+        -webkit-transition: box-shadow 0.2s;
+
+    }
+    .radioco-information input[type=range]::-webkit-slider-thumb:hover {
+        box-shadow:#fff 1px 1px 20px;
+    }
+
+    .radioco-information input[type=range]:active, .information input[type=range]:focus {
+        outline: 0;
+    }
+
+    .radioco-elapsedTime{
+        opacity:0.4;
+        font-size:14px;
+    }
+}
+
+.IconScroll {
+    @include icon-scroll ("../images/icon-down.png");
+}
+
+@-webkit-keyframes animatedBackground {
+    0% {
+        background-position: center center;
+    }
+    40% {
+        background-position: center 40%;
+    }
+    60% {
+        background-position: center 60%;
+    }
+}
+
+@keyframes animatedBackground {
+    0% {
+        background-position: center center;
+    }
+    40% {
+        background-position: center 40%;
+    }
+    60% {
+        background-position: center 60%;
+    } 
+}
+
+.IconScroll.up {
+    @include icon-scroll ("../images/icon-up.png");
+    float:right;
+}
+
+.IconScroll:hover,
+.IconScroll.up:hover {
+    -webkit-animation: animatedBackground 2s linear infinite;
+    animation: animatedBackground 2s linear infinite;
+    background-color:#5e0e5c;	
+}
+
+.DownloadLink a {
+    width:180px;
+    display:inline-block;
+    margin-right:20px;
+    overflow:hidden;
+}
+
+#Screenshots {
+    background:url(images/bg-pattren.png) repeat left top;
+    .container {
+        max-width:$container-width/1.3;
+    }
+}
+
+#Screenshots .media {
+    padding:$padding 0;
+}
+
+#Screenshots .media-middle {
+    width:40%;	
+    display: table-cell;
+    vertical-align: middle;
+    position:relative;
+    text-align:center;
+}
+
+#Screenshots .media-body {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left:$padding*2;
+}
+
+#Download {
+    background:url(images/bg-download-section.jpg) repeat-x left bottom  rgb(31,94,163);
+    position:relative;
+    color:$text-white;
+    padding:$padding*2 0;
+    .TextArea {
+        padding:$padding*4 0 0 $padding*3;
+        position:relative;
+        max-width:450px;
+        width:100%;
+        z-index:1;
+    }
+
+    h1 {
+        color:$text-white;
+    }
+
+    .DownloadLink {
+        margin-top:$margin;
+    }
+
+    .DownloadLink a {
+        width:140px;
+        margin-right:10px;
+    }
+}
+
+.imgDownload {
+    position:absolute;
+    z-index:0;
+    right:0;
+    bottom:0;
+}
+
+footer {
+    background-color:#353854;
+    overflow:hidden;
+    padding:$padding 0;
+
+
+    ul {
+        @include list-style-none;
+        float:left;
+        position:relative;
+        margin-bottom:$margin;
+        padding-bottom:$padding;
+        &:after {
+            border-bottom:solid 1px #434769;
+            content:"";
+            width:700%;
+            position:absolute;
+            left:0;
+            bottom:0%;
+        }
+        li {
+            display:inline-block;
+            font-family:$font-family-reg;
+            font-size:$font-size-menu;
+            text-transform:uppercase;
+            padding:0 $padding/2;
+            &:first-child {
+                padding-left:0;
+            }
+            a {
+                color:$text-white;
+                &:hover {
+                    color:#92278f;
+                }
+            }
+        }
+    }
+
+    .FooterRight {
+        float:right;
+        max-width: 500px;
+        width: 100%;
+        padding-top:20px;
+        position:relative;
+        color:#565b87;
+        font-size:$font-size-menu;
+    }
+}
+
+@media only screen and (max-width:1150px) {
+    .container {
+        max-width:980px;
+    }
+}
+
+@media only screen and (max-width:1023px) {
+    .container {
+        max-width:950px;
+    }
+
+    .imgDownload {
+        max-width:50%;
+    }
+}
+
+@media only screen and (max-width:979px) {
+    .container,
+    #Screenshots .container {
+        max-width:770px;
+    }
+
+    #Download .TextArea {
+        padding:0 0 0 20px;
+    }
+}
+
+@media only screen and (max-width:799px) {
+    .container,
+    #Screenshots .container {
+        max-width:730px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .container,
+    #Screenshots .container {
+        max-width:90%;
+    }
+
+    .SocialLinks a {
+        margin:0 10px;
+    }
+
+    nav ul li {
+        padding:0 5px;
+    }
+
+    .HeaderRight {
+        padding-top:50px;
+    }
+
+    .DownloadLink {
+        margin-bottom:20px;
+    }
+
+    footer .FooterRight {
+        max-width:420px;
+    }
+
+    footer ul li {
+        padding:0 10px;
+    }
+}
+
+@media only screen and (max-width:639px) {
+    .Logo {
+        margin:0 auto;
+        max-width:136px;
+        float:none;
+    }
+
+    .HeaderRight {
+        padding: 20px 0;
+    }
+
+    #Banner {
+        padding-top:220px;
+    }
+
+    #Banner .radioplayer {
+        height:110px;
+        max-width:400px;
+    }
+
+    #Banner .radioco-information {
+        width:250px;
+        top:0;
+    }
+
+    #Screenshots .media-middle,
+    #Screenshots .media-body {
+        width:100%;
+        display:block;
+        padding:0;
+    }
+
+    #Screenshots .media {
+        padding-top:0;
+        margin-bottom:$margin;
+        border-bottom: solid 5px #92278f;
+    }
+
+    #Screenshots .media:last-child {
+        border:none;
+    }
+
+    .HeaderRight {
+        width:100%;
+        float:none;
+        text-align:center;
+    }
+
+    .SocialLinks,
+    nav {
+        float:none;
+        display:inline-block;
+        margin-bottom:15px;
+        vertical-align: top;
+    }
+}
+
+@media only screen and (max-width:479px) {
+    #Banner {
+        .radioplayer {
+            max-width:230px;
+        }
+
+        .radioco-information span.radioco-nowPlaying {
+            display:none;
+        }
+
+        .radioco-information {
+            width:150px;
+            text-align:right;
+        }
+
+        .radioco-image {
+            width:100px;
+            height:100px;
+        }
+
+        .radioplayer {
+            height: 60px;
+        }
+
+        .radioco-playButton {
+            font-size: 35px;
+            margin-left:7%;
+            top: 7px;
+        }
+
+        .radioco-information input[type="range"] {
+            margin-left:20px;
+        }
+    }
+
+    nav ul li a {
+        font-size:12px;
+    }
+
+    #Banner {
+        padding-top: 250px;
+    }
+
+    #Banner h1 {
+        font-size:22px;
+    }
+
+    #Banner p {
+        line-height:normal;
+    }
+
+    .DownloadLink a,
+    #Download .DownloadLink a {
+        width:120px;
+        margin-right:10px;
+    }
+
+    h1 {
+        font-size:20px;
+    }
+
+    #Download {
+        padding:30px 0;
+    }
+
+    #Download .TextArea {
+        padding:0;
+    }
+
+    footer ul {
+        width:100%;
+        text-align:center;
+        margin-bottom:10px;
+        padding-bottom:10px;
+    }
+}
